@@ -1,4 +1,3 @@
-#if: tag IS present
 dist: xenial
 language: minimal
 sudo: required
@@ -16,16 +15,16 @@ addons:
     - bsdtar
     - axel
 script:
-- make build_armbian=y build_libreelec=y build_lakka=y build_alpine=y build_archlinux=y build
+- make build_armbian=y build
 - ls -l output
 deploy:
   provider: releases
   api_key:
-    secure: DtKpcwr08uKZn4DfajyknVfMTO9rJ38ASWqokZFl3LcjZdQhd8lAiPSkq1GMmU1QmlKqHXEJFcYsv9lDR3NSC/03N2NE1DzUp6Xvl0QX3A/Xtd54RbP0RK3/SXaeJKAz1UsNLXYEi5D+q2yz3pkAhdH3IyNTeMUm2E/7k7R95mjVkF6wPTnwmF0avSfrwud2MYo8EroezQXg+nJYRGLNLdAX+zyF2FDIcxFI8s3Z/WBQN6u5BXX0cy//C+J+M/M7Apf9zaMqhibmypnB0YJkhM+Of/C90BTxgQSTDVHwBFTn9cHIgH/Ox1yCCQ8fv/olhf/G4jKakEf1V4kJ8BIfGY0M6b1XqFMtxa84vcXGW5L+TXpVkJOfw06YNtLJLeLuqfqqGqRCuRra80NuoBwRo+JUHpnCZAMxDIHfhVLD8jKkzzL0S4pUykppPlxUgudbkNVLXkOIOEdcn6/G8V0NgjVd2o/Pr9ZUCuZGl5HoJpLhleYPss9/0Pba+aBbAFq8TufmjPsC6IaivVC1pRWz2dLJ/2eoNQOAX72D9HRuRLFjDSVIdUojkv7DNH85iJM4zGUZTzC/+Nf0HizXH7peYNPlPiPdyvIfxPdBED+AVxt5jleNIdovnEiB3DoQQfmqnw1/R3t0ichxZKpNnJFcWUTH8t6gqgWFjrs68lAHQvM=
+    secure: NTzfr/4TtlMwnpgwXLin1f7BQ+/a+6WJ3eibAUSOnA7xyxXweweGFHFI7Y11QMj6W8ETIvgVDdPUQ+dp2wXtHzG5wtS5wNprv+pnmjKWageIVWn8fTJx/MIgdfneQeid8Bi7yb68x7polh+hRN0SQd4/YPFdFi2VXyHnlTdqBJoYbvxkz08nNxaI0XDiKrAlDUSPEuT7OvImEXFGvk58FS+/XmFRmdNDPslcjGQ+ap0yA2ufxUZlM2FBs/DqwvIXAIxUDQHtYejHlpGr1BJAwNq522c/GJb8LQqT07FMADaSV14mzbBSj2RrU0PiwnKn/EZIk32o/40twjHI2wp1yxbd5cXDJvKmTHzirMSsOxZnEtxUmwGh0Yg9rNF8EAJLDuD0EFmaL5LOWlf6R/7IkJ31pN4Dgd904BtzZXgLzFtTawv6SeN3YsDIk+NWllCAeN6YEK5upWPzyTnxnuaERpMRbqp5pF276Ke7zZ/OvEo41J9f6BlUy7YIdKSEgucyPF8qgtVJ4GmINAKrm4TnDdwvlSloERGpR0Nbgt+Nhho7c+2BbOYkedYOAUZCd348/YgXObeolcarg323HuP7+NtkHOM2YmdJ4+qG1H3Jug/FfN77PMECwH9JqjmrxJuM8OLkeiwzRrAVv4OdSAbsvbqj5cT4LdSy/iiWwDB5Pls=
+  file: output/*.xz
   skip_cleanup: true
   overwrite: true
   file_glob: true
-  file: output/*.xz
   on:
-    repo: hanwckf/build-beikeyun
+    repo: xiangtailiang/build-beikeyun
     tags: true

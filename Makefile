@@ -1,4 +1,4 @@
-DTB_HEADLESS := dtbs/4.4-bsp/headless/rk3328-beikeyun.dtb
+DTB_HEADLESS := dtbs/4.4-bsp/headless/rk3328-liziyun.dtb
 DTB_BOX := dtbs/4.4-bsp/box/rk3328-beikeyun.dtb
 
 DL := input

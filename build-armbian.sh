@@ -8,7 +8,7 @@ tmpdir="tmp"
 output="output"
 
 origin="Rock64"
-target="beikeyun"
+target="liziyun"
 
 func_umount() {
 	umount $mount_point
